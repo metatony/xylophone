@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(const Xylophone());
 
@@ -18,7 +18,10 @@ class Xylophone extends StatelessWidget {
               Expanded(
                 child: MaterialButton(
                   color: Colors.red,
-                  onPressed: () {},
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('assets/note1.wav');
+                  },
                 ),
               ),
               Expanded(
